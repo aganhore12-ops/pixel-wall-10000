@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="Pixel Wall 10K — beli ruang digital di kanvas 10.000 pixel bersama.">
+  <meta property="og:title" content="Pixel Wall 10K">
+  <meta property="og:description" content="Own a piece of the internet. Mulai dari Rp1.000 per pixel.">
+  <title>PIXEL10K — Own a piece of the internet</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/">PIXEL<span>10K</span></a><a href="#wall">Beli Pixel</a></header>
+<main>
+  <section class="hero">
+    <small>OWN A PIECE OF THE INTERNET</small>
+    <h1>10.000 pixel.<br><em>Jadikan milikmu.</em></h1>
+    <p>Satu kanvas digital bersama untuk nama, karya, brand, komunitas, atau pesanmu.</p>
+    <a class="cta" href="#wall">Mulai dari Rp1.000 →</a>
+  </section>
+
+  <section class="stats" aria-label="Statistik Pixel Wall">
+    <div><b id="sold">0</b><span>terjual</span></div>
+    <div><b id="available">10.000</b><span>tersedia</span></div>
+    <div><b id="progress">0%</b><span>terisi</span></div>
+  </section>
+
+  <section id="wall" class="section">
+    <small>THE WALL</small><h2>Pilih pixelmu.</h2>
+    <p class="muted">Klik pixel yang ingin kamu miliki. Kamu bisa memilih banyak pixel sekaligus.</p>
+    <div class="wall-wrap"><div id="grid" class="grid" aria-label="Pixel Wall 10.000 pixel"></div></div>
+    <div class="buybar">
+      <div><span id="count">0 pixel</span><strong id="price">Rp0</strong></div>
+      <button id="next" disabled>Pasang karya →</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <small>GALLERY</small><h2>Yang sudah ikut.</h2>
+    <div id="gallery" class="gallery"><p class="muted">Memuat...</p></div>
+  </section>
+</main>
+
+<dialog id="modal">
+  <button id="close" class="close" aria-label="Tutup">×</button>
+  <small>YOUR SPACE</small><h2>Isi area kamu.</h2>
+  <p id="summary" class="muted"></p>
+  <label>Nama / brand<input id="name" maxlength="80" autocomplete="organization" placeholder="Contoh: Kopi Nusantara"></label>
+  <label>Pesan singkat<input id="message" maxlength="180" placeholder="Contoh: Semoga terus tumbuh 🚀"></label>
+  <label>Website / link<input id="website" maxlength="300" inputmode="url" placeholder="https://... (opsional)"></label>
+  <label>Warna pixel<input id="color" type="color" value="#d8ff38"></label>
+  <label>Logo / gambar <small>PNG, JPG, WEBP • maks. 3 MB</small><input id="image" type="file" accept="image/png,image/jpeg,image/webp"></label>
+  <img id="preview" alt="Preview gambar">
+  <div class="checkout-total"><span>Total</span><b id="total">Rp0</b></div>
+  <label class="check"><input id="terms" type="checkbox"> Saya menyetujui bahwa listing dapat ditampilkan publik dan mengikuti aturan konten Pixel Wall.</label>
+  <button id="pay" class="pay">Bayar & lanjutkan</button>
+  <p class="fine">Pembayaran diproses melalui Midtrans. Pixel dikunci sementara selama proses pembayaran.</p>
+</dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js" defer></script>
+</body>
+</html>
